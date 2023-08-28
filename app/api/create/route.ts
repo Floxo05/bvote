@@ -8,6 +8,10 @@ const save = async (req: NextRequest) => {
         const conn: Connection = await getConnection();
         const value = await req.json();
 
+        if (value.pw != process.env.API_PW) {
+            return new NextResponse("", {status: 401})
+        }
+
         // Generiere einen zufälligen SHA-256 Hash
         const hash = crypto.createHash("sha256").update(Math.random().toString()).digest("hex");
 

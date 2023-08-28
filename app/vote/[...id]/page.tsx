@@ -1,16 +1,53 @@
 "use client";
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const Home = ({params}: any) => {
 
     console.log(params);
 
-    const name = "Candy";
-    const gender = "m";
-    const id = params.id;
+    const { id } = params;
+
+    const [bvoteData, setBvoteData] = useState<Bvote | null>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/api/load', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        id,
+                    }),
+                });
+
+                if (response.ok) {
+                    const data: Bvote = await response.json();
+                    setBvoteData(data);
+                } else {
+                    console.error('API request failed');
+                }
+            } catch (error) {
+                console.error('API request failed:', error);
+            }
+        };
+
+        fetchData();
+    }, [id]);
 
     const [selectedOption, setSelectedOption] = useState('');
+
+    if (!bvoteData) {
+        return (
+            <>
+                <p>Diese Seite ist nichts für dich ;D</p>
+            </>
+        );
+    }
+
+    const { name, gender } = bvoteData;
 
     const handleButtonClick = async (option: string) => {
         setSelectedOption(option);
