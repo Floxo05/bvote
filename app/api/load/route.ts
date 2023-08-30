@@ -2,10 +2,14 @@ import { NextRequest, NextResponse } from "next/server";
 import { getConnection } from "@/utilities/connection";
 import { Connection } from "mariadb";
 
+type loadRequestBody = {
+    id: string
+}
+
 const getBVoteByHash = async (req: NextRequest) => {
     try {
         const conn: Connection = await getConnection();
-        const {id} = await req.json();
+        const value: loadRequestBody = await req.json();
 
         // Suche den Datensatz anhand des Hash-Werts
         const selectQuery = `
@@ -13,9 +17,8 @@ const getBVoteByHash = async (req: NextRequest) => {
             where hash = ?
             limit 1
         `;
-        conn.debug(true);
 
-        const [row] = await conn.query(selectQuery, [id]);
+        const [row] = await conn.query(selectQuery, [value.id]);
 
         await conn.end(); // Schließe die Verbindung zur Datenbank
 

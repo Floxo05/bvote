@@ -3,10 +3,16 @@ import { getConnection } from "@/utilities/connection";
 import { Connection } from "mariadb";
 import crypto from "crypto";
 
+type createRequestBody = {
+    pw: string,
+    name: string,
+    gender: string
+}
+
 const save = async (req: NextRequest) => {
     try {
         const conn: Connection = await getConnection();
-        const value = await req.json();
+        const value: createRequestBody = await req.json();
 
         if (value.pw != process.env.API_PW) {
             return new NextResponse("", {status: 401})
