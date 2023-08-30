@@ -59,7 +59,7 @@ const VotePage = ({params}: any) => {
                         abstimmung: option
                     })
                 }
-                alert('Danke für deine Rückmeldung');
+                alert('Danke für deine Rückmeldung!');
 
             } else {
                 console.error('API request failed');
@@ -112,7 +112,7 @@ const VotePage = ({params}: any) => {
                                 jemanden als +1 dabei haben willst oder leider busy bist, damit wir alles vorbereiten können.
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
-                                Wor freuen uns sehr darauf, dich wieder zu sehen und mit dir die Hütte abzureisen!
+                                Wir freuen uns sehr darauf, dich wieder zu sehen und mit dir die Hütte abzureisen!
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
                                 Liebe Grüße,<br/>
