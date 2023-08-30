@@ -59,6 +59,8 @@ const VotePage = ({params}: any) => {
                         abstimmung: option
                     })
                 }
+                alert('Danke für deine Rückmeldung');
+
             } else {
                 console.error('API request failed');
             }
@@ -82,39 +84,39 @@ const VotePage = ({params}: any) => {
                         :
                         <>
                             <h1 className="text-3xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Einladung zu
-                                meinem 21. Geburtstag!</h1>
+                                unserem 21. Geburtstag!</h1>
                             <p className="text-gray-700 dark:text-gray-300">
                                 Liebe{bvoteData?.gender == "m" ? "r" : ""} {bvoteData?.name},<br/>
-                                die Zeit ist gekommen, um meinen 21. Geburtstag gebührend zu feiern! Ich lade dich
-                                herzlich ein, an diesem besonderen Tag mit mir anzustoßen und bis tief in die Nach zu feiern.
+                                die Zeit ist gekommen, um unseren 21. Geburtstag gebührend zu feiern! Wir laden dich
+                                herzlich ein, an diesem besonderen Tag mit uns anzustoßen und bis tief in die Nacht zu feiern.
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
-                                <strong>Datum:</strong> 4. November 2023, ab 19:00 Uhr bis in die frühen Morgenstunden
-                                des 5. November<br/>
-                                <strong>Ort:</strong> bei mir Zuhause in Floh, Höhnbergstraße 37, 98593 Floh-Seligenthal
+                                <strong>Datum:</strong> 4. November 2023, ab 18:00 Uhr bis in die frühen Morgenstunden
+                                des 5. Novembers<br/>
+                                <strong>Ort:</strong> bei Flo in Floh Zuhause, Höhnbergstraße 37, 98593 Floh-Seligenthal
                             </p>
 
                             <h2 className="text-gray-800 dark:text-gray-200 mt-6">Was erwartet euch?</h2>
                             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
                                 <li>Für Bier ist gesorgt, um die Kehlen zu ölen und die Stimmung anzuheizen.</li>
-                                <li>Alle weiteren Getränke könnt ihr entweder selbst mitbringen oder gegen einen kleinen
-                                    Beitrag erwerben.
-                                </li>
+                                <li>Die Hydration der Fahrer wird auch sicher gestellt.</li>
+                                <li>Bring doch gerne als Erweiterung des Sortiments dein Lieblingsgetränk mit.</li>
+                                <li>Die abendliche Verpflegung wird von uns bereitgestellt.</li>
                             </ul>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
-                                Denkt daran, für eine sichere Heimfahrt zu sorgen, da die Feier sicherlich ausgelassen
-                                wird. Wer möchte, kann gerne bei mir übernachten.
+                                Denk daran, für eine sichere Heimfahrt zu sorgen, da die Feier sicherlich ausgelassen
+                                wird. Wer möchte, kann gerne bei Flo übernachten.
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
-                                Stimmt bitte auf dieser Seite bis zum 22. Oktober ab, ob ihr dabei sein könnt, noch
-                                jemanden dabei haben wollt oder leider busy seid, damit ich vorbereiten können.
+                                Stimm bitte auf dieser Seite bis zum 22. Oktober ab, ob du dabei sein kannst, noch
+                                jemanden als +1 dabei haben willst oder leider busy bist, damit wir alles vorbereiten können.
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
-                                Ich freue mich sehr darauf, dich wieder zu sehen und mit dir die Hütte abzureisen!
+                                Wor freuen uns sehr darauf, dich wieder zu sehen und mit dir die Hütte abzureisen!
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
                                 Liebe Grüße,<br/>
-                                Florian
+                                Malte und Florian
                             </p>
                             <div className="grid gap-4 grid-cols-1 md:grid-cols-3 mt-6">
                                 <button
@@ -152,8 +154,6 @@ const VotePage = ({params}: any) => {
                     }
                 </>
             }
-
-
         </main>
     );
 };
