@@ -137,7 +137,7 @@ const VotePage = ({params}: any) => {
                                     }`}
                                     onClick={() => handleButtonClick('multiple')}
                                 >
-                                    Ich komm nicht alleine
+                                    Ich komm mit +1
                                 </button>
                                 <button
                                     className={`text-white py-2 px-4 rounded ${
