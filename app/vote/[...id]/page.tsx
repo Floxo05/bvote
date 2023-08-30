@@ -82,18 +82,15 @@ const VotePage = ({params}: any) => {
                         :
                         <>
                             <h1 className="text-3xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Einladung zu
-                                meinem 21.
-                                Geburtstag!</h1>
+                                meinem 21. Geburtstag!</h1>
                             <p className="text-gray-700 dark:text-gray-300">
                                 Liebe{bvoteData?.gender == "m" ? "r" : ""} {bvoteData?.name},<br/>
                                 die Zeit ist gekommen, um meinen 21. Geburtstag gebührend zu feiern! Ich lade dich
-                                herzlich ein,
-                                an diesem besonderen Tag mit mir anzustoßen und bis tief in die Nach zu feiern.
+                                herzlich ein, an diesem besonderen Tag mit mir anzustoßen und bis tief in die Nach zu feiern.
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
                                 <strong>Datum:</strong> 4. November 2023, ab 19:00 Uhr bis in die frühen Morgenstunden
-                                des 5.
-                                November<br/>
+                                des 5. November<br/>
                                 <strong>Ort:</strong> bei mir Zuhause in Floh, Höhnbergstraße 37, 98593 Floh-Seligenthal
                             </p>
 
@@ -101,20 +98,16 @@ const VotePage = ({params}: any) => {
                             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
                                 <li>Für Bier ist gesorgt, um die Kehlen zu ölen und die Stimmung anzuheizen.</li>
                                 <li>Alle weiteren Getränke könnt ihr entweder selbst mitbringen oder gegen einen kleinen
-                                    Beitrag
-                                    erwerben.
+                                    Beitrag erwerben.
                                 </li>
                             </ul>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
                                 Denkt daran, für eine sichere Heimfahrt zu sorgen, da die Feier sicherlich ausgelassen
-                                wird. Wer
-                                möchte, kann gerne bei mir übernachten oder sich bei Bekannten in Leipzig nach
-                                Übernachtungsmöglichkeiten umsehen.
+                                wird. Wer möchte, kann gerne bei mir übernachten.
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
                                 Stimmt bitte auf dieser Seite bis zum 22. Oktober ab, ob ihr dabei sein könnt, noch
-                                jemanden
-                                dabei haben wollt oder leider busy seid, damit ich vorbereiten können.
+                                jemanden dabei haben wollt oder leider busy seid, damit ich vorbereiten können.
                             </p>
                             <p className="text-gray-700 dark:text-gray-300 mt-4">
                                 Ich freue mich sehr darauf, dich wieder zu sehen und mit dir die Hütte abzureisen!
